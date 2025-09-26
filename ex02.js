@@ -4,7 +4,8 @@
 // Test your function with different numbers of arguments.
 
 function subtract(...numbers) {
-  // Your code here
+  return numbers.sort((a, b) => b > a ? 1 : -1).reduce((acc, curr) => acc - curr);
+  
 }
 
-console.log(subtract(10, 2, 3)); // Example usage
+console.log(subtract(3, 15, 7)); // Example usage
